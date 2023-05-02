@@ -12,7 +12,7 @@ def vigenereScreen(text_area):
         key_index = 0
         for char in input:
             if char.isalpha():
-                shift = ord(key[key_index]) - ord('A')
+                shift = ord(key[key_index]) - ord('A') + 1
                 if char.islower():
                     encrypted_char = chr(
                         (ord(char) - ord('A') + shift) % 26 + ord('a'))
@@ -33,7 +33,7 @@ def vigenereScreen(text_area):
         key_index = 0
         for char in input:
             if char.isalpha():
-                shift = ord(key[key_index]) - ord('A')
+                shift = ord(key[key_index]) - ord('A') + 1
                 if char.islower():
                     decrypted_char = chr(
                         (ord(char) - ord('a') - shift) % 26 + ord('a'))
